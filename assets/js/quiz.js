@@ -136,6 +136,19 @@ function nextQuestion() {
     rightResultsEl.setAttribute("style", "display: none;");
     wrongResultsEl.setAttribute("style", "display: none;");
 
+    btn.addEventListener("click", function (event) {
+        if (event.target.innerText === rightAnswers[index]) {
+            score +
+                rightResultsEl.setAttribute("style", "display: block;");
+        }
+        else {
+            score -
+                wrongResultsEl.setAttribute("style", "display: block;");
+                timeLeft = timeLeft - 2;
+        }
+    })
+    
+
 
 
 
