@@ -11,7 +11,7 @@ var submitButton = document.getElementById("submit-button");
 var controlsEl = document.getElementById("hidden-controls-container");
 var answerEl = document.getElementById("options");
 var answerButtons = document.querySelectorAll(".answers");
-var correctEl = document.getElementById("right-answers");
+var rightEl = document.getElementById("right-answers");
 var btn = document.createElement("button");
 var rightResultsEl = document.getElementById("hidden-right");
 var wrongResultsEl = document.getElementById("hidden-wrong");
@@ -38,7 +38,7 @@ var buttonOneAnswers = ['Slytherin', 'Gryffindor', 'Hufflepuff', 'Ravenclaw'];
 var buttonTwoAnswers = ['Quaffle', 'Bludger', 'Snitch', 'Quiffle'];
 var buttonThreeAnswers = ['Tom Riddle', 'Timothy Raddler', 'Tommy Boy', 'Tom Reddler'];
 var buttonFourAnswers = ['Hermione Granger', 'Cho Change', 'Cedric Diggory', 'Draco Malfoy'];
-var correctAnswers = ['Gryffindor', 'Snitch', 'Tom Riddle', 'Cedric Diggory'];
+var rightAnswers = ['Gryffindor', 'Snitch', 'Tom Riddle', 'Cedric Diggory'];
 
 var index = 0;
 
@@ -46,12 +46,12 @@ var buttonOneIndex = 0;
 var buttonTwoIndex = 0;
 var buttonThreeIndex = 0;
 var buttonFourIndex = 0;
-var correctAnswersIndex = 0;
+var rightAnswersIndex = 0;
 
 function quizStart() {
     startButton.addEventListener("click", function () {
-        quizDivEl.setAttribute("style", "display:none");
-        quizQuestEl.setAttribute("style", "display: block");
+        quizEl.setAttribute("style", "display:none");
+        quizQuestionEl.setAttribute("style", "display: block");
         controlsEl.setAttribute("style", "display: block;");
         questionTextEl.innerText = quizQuestions[0];
 
@@ -68,9 +68,9 @@ function quizStart() {
         answerEl.appendChild(btn4);
 
         btn.addEventListener("click", function (event) {
-            if (event.target.innerText === correctAnswers[index]) {
+            if (event.target.innerText === rightAnswers[index]) {
                 score++;
-                correctResultsEl.setAttribute("style", "display: block;");
+                rightResultsEl.setAttribute("style", "display: block;");
 
             }
             else {
@@ -81,9 +81,9 @@ function quizStart() {
         })
 
         btn2.addEventListener("click", function (event) {
-            if (event.target.innerText === correctAnswers[index]) {
+            if (event.target.innerText === rightAnswers[index]) {
                 score++;
-                correctResultsEl.setAttribute("style", "display: block;");
+                rightResultsEl.setAttribute("style", "display: block;");
 
             }
             else {
@@ -95,9 +95,9 @@ function quizStart() {
         })
 
         btn3.addEventListener("click", function (event) {
-            if (event.target.innerText === correctAnswers[index]) {
+            if (event.target.innerText === rightAnswers[index]) {
                 score++;
-                correctResultsEl.setAttribute("style", "display: block;");
+                rightResultsEl.setAttribute("style", "display: block;");
             }
             else {
                 score--;
@@ -107,9 +107,9 @@ function quizStart() {
         })
 
         btn4.addEventListener("click", function (event) {
-            if (event.target.innerText === correctAnswers[index]) {
+            if (event.target.innerText === rightAnswers[index]) {
                 score++;
-                correctResultsEl.setAttribute("style", "display: block;");
+                rightResultsEl.setAttribute("style", "display: block;");
             }
             else {
                 score--;
@@ -148,14 +148,14 @@ function nextQuestion() {
         }
     })
     btn2.addEventListener("click", function (event) {
-        if (event.target.innerText === righttAnswers[index]) {
+        if (event.target.innerText === rightAnswers[index]) {
             score +
                 rightResultsEl.setAttribute("style", "display: block;");
         }
         else {
             score -
                 wrongResultsEl.setAttribute("style", "display: block;");
-                timeLeft = timeLeft - 3;
+                timeLeft = timeLeft - 2;
         }
     })
 
@@ -167,7 +167,7 @@ function nextQuestion() {
         else {
             score -
                 wrongResultsEl.setAttribute("style", "display: block;");
-                timeLeft = timeLeft - 3;
+                timeLeft = timeLeft - 2;
         }
     })
 
@@ -179,9 +179,35 @@ function nextQuestion() {
         else {
             score -
                 wrongResultsEl.setAttribute("style", "display: block;");
-                timeLeft = timeLeft - 3;
+                timeLeft = timeLeft - 2;
 
         }
     })
 
+    buttonOneIndex++;
+    buttonOneIndex %= buttonOneAnswers.length;
+    btn.textContent = buttonOneAnswers[index];
+
+
+    buttonTwoIndex++
+    buttonTwoIndex %= buttonTwoAnswers.length;
+    btn2.textContent = buttonTwoAnswers[index];
+
+    buttonThreeIndex++
+    buttonThreeIndex %= buttonThreeAnswers.length;
+    btn3.textContent = buttonThreeAnswers[index];
+
+    buttonFourIndex++
+    buttonFourIndex %= buttonFourAnswers.length;
+    btn4.textContent = buttonFourAnswers[index];
+
+
+    if (index < quizQuestions.length - 1) {
+    }
+    else {
+        nextButton.setAttribute("style", "display: none;");
+        
+
+    }
     
+}
