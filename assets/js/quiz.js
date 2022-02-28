@@ -67,7 +67,18 @@ function quizStart() {
         btn4.textContent = buttonFourAnswers[0];
         answerEl.appendChild(btn4);
 
-        
+        btn.addEventListener("click", function (event) {
+            if (event.target.innerText === correctAnswers[index]) {
+                score++;
+                correctResultsEl.setAttribute("style", "display: block;");
+
+            }
+            else {
+                score--;
+                wrongResultsEl.setAttribute("style", "display: block;");
+                timeLeft = timeLeft - 3;
+            }
+        })
 
 
 
