@@ -123,8 +123,7 @@ function quizStart() {
     })
 }
 
-
-
+nextButton.addEventListener("click", nextQuestion);
 
 
 
