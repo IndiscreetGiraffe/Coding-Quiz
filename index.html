@@ -20,10 +20,51 @@
             <button type="button" id="start-button">Let's begin!</button>
         </div>
         
+        <div id="quiz-questions">
+            <div id="hidden-container">
+                <div id="question-text"></div>
+                <div id="options">
 
+                </div>
+                <div id="right-answers"></div>
+            </div>
+        </div>
 
+        <div class="controls">
+            <div id="hidden-controls-container">
+                <div class="results">
+                    <span id="hidden-right">Well done fellow wizard!</span>
+                    <span id="hidden-wrong">Avada Kedavra! Try Again!</span>
+                </div>
+                <button type="button" id="next-button" class="buttons">Keep going</button>
+                <button type="button" id="submit-button" class="buttons">Submit your answer</button>
+            </div>
+        </div>
 
+        <div class="score-container">
+            <div id="hidden-score-container">
+                <div id="score">
 
+                </div>
+                <div class="formBox">
+                    <form>
+                        <label for="name">Enter wizard name here</label>
+                        <input type="text" id="name" name="name">
+                        <button type="submit" id="save-button">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="top-score">
+            <div id="hidden-top-score">
+                <h2> Top Scores </h2>
+                <ul id="score-list">
+
+                </ul>
+                <button type="button" id="play-again" class="buttons">Play it again</button>
+            </div>
+        </div>
 
 
         <script src="./assets/js/quiz.js"></script>
