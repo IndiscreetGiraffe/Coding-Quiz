@@ -226,3 +226,13 @@ function endQuiz() {
     scoreEl.innerText = "You're finished! Your house receives " + scoreDisplay + " points.";
     clearInterval(timeInterval);
 }
+
+submitButton.addEventListener("click", function () {
+    quizQuestionEl.setAttribute("style", "display: none;");
+    quizScoreEl.setAttribute("style", "display: block");
+    wrongResultsEl.setAttribute("style", "display: none;");
+    rightResultsEl.setAttribute("style", "display: none;");
+    nextButton.setAttribute("style", "display: none;");
+    endQuiz();
+    
+})
