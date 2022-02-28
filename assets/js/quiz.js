@@ -32,6 +32,7 @@ var nameInput = document.getElementById("name");
 var score = 0;
 var timeInterval 
 
+var quizQuestions = ['What house colors are red and gold?', 'In quidditch, what is the smallest and quickest ball called?', 'What was Voldemorts actual name?', 'Who belongs to the Huffle Puff house?'];
 
 
 
