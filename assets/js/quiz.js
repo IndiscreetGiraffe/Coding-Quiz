@@ -76,9 +76,56 @@ function quizStart() {
             else {
                 score--;
                 wrongResultsEl.setAttribute("style", "display: block;");
-                timeLeft = timeLeft - 3;
+                timeLeft = timeLeft - 2;
             }
         })
+
+        btn2.addEventListener("click", function (event) {
+            if (event.target.innerText === correctAnswers[index]) {
+                score++;
+                correctResultsEl.setAttribute("style", "display: block;");
+
+            }
+            else {
+                score--;
+                wrongResultsEl.setAttribute("style", "display: block;");
+                timeLeft = timeLeft - 2;
+
+            }
+        })
+
+        btn3.addEventListener("click", function (event) {
+            if (event.target.innerText === correctAnswers[index]) {
+                score++;
+                correctResultsEl.setAttribute("style", "display: block;");
+            }
+            else {
+                score--;
+                wrongResultsEl.setAttribute("style", "display: block;");
+                timeLeft = timeLeft - 2;
+            }
+        })
+
+        btn4.addEventListener("click", function (event) {
+            if (event.target.innerText === correctAnswers[index]) {
+                score++;
+                correctResultsEl.setAttribute("style", "display: block;");
+            }
+            else {
+                score--;
+                wrongResultsEl.setAttribute("style", "display: block;");
+                timeLeft = timeLeft - 2;
+            }
+        })
+
+        countdownTimer();
+
+    })
+}
+
+
+
+
 
 
 
