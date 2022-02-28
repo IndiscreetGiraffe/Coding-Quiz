@@ -8,9 +8,17 @@
         <title>Quick Coding Quiz</title>
     </head>
     <body>
-        <div id="quiz"></div>
-        <button id="submit">Submit Quiz</button>
-        <div id="results"></div>
+        <header class="q-head">
+            <span class="top-score"><button type="button" id="top-score-button"class="buttons">Look at your top scores here!</button></span>
+            <span class="time-left" id="countdown">60s left</span>
+        </header>
+
+        <div id="quiz-name-div">
+            <h1 class="quiz-name"></h1>
+            <h2 class="quiz-description">How much do you know about Harry Potter?</h2>
+            <h3 class="quiz-rules">Be careful, every wrong answer will cut 10s out of your time.</h3>
+            <button type="button" id="start-button">Let's begin!</button>
+        </div>
         
 
 
