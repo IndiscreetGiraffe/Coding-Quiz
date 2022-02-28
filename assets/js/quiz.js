@@ -32,9 +32,13 @@ var nameInput = document.getElementById("name");
 var score = 0;
 var timeInterval 
 
-var quizQuestions = ['What house colors are red and gold?', 'In quidditch, what is the smallest and quickest ball called?', 'What was Voldemorts actual name?', 'Who belongs to the Huffle Puff house?'];
+var quizQuestions = ['What house colors are red and gold?', 'In quidditch, what is the smallest and quickest ball called?', 'What was Voldemorts actual name?', 'Who belongs to the Hufflepuff house?'];
 
-
+var buttonOneAnswers = ['Slytherin', 'Gryffindor', 'Hufflepuff', 'Ravenclaw'];
+var buttonTwoAnswers = ['Quaffle', 'Bludger', 'Snitch', 'Quiffle'];
+var buttonThreeAnswers = ['Tom Riddle', 'Timothy Raddler', 'Tommy Boy', 'Tom Reddler'];
+var buttonFourAnswers = ['Hermione Granger', 'Cho Change', 'Cedric Diggory', 'Draco Malfoy'];
+var correctAnswers = ['Gryffindor', 'Snitch', 'Tom Riddle', 'Cedric Diggory'];
 
 
 
