@@ -53,9 +53,6 @@
             }
         });
     
-        resultsContainer.innerHTML = `${numCorrect} out of {myQuestions.length}`;
-    };
-    
     const quizContainer = document.getElementById('quiz');
     const resultsContainer = document.getElementById('results');
     const submitButton = document.getElementById('submit');
@@ -69,8 +66,9 @@
                 4. "Numbers"
             },
             correctAnswer: "3."
-        }
+        };
     ];
     
     submitButton.addEventListener('click',showResults);
     })();
+    console.log(click, hello);
