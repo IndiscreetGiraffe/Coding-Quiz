@@ -1,4 +1,17 @@
-(fucntion(){
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*This is the old js stuff, I realize now why it wasn't working. I'm going to use the var method to get this working(fucntion(){
     function buildQuiz(){
 
         const output = [];
