@@ -19,7 +19,18 @@ var highScoreButton = document.getElementById("high-score-button");
 var highScoreEl = document.getElementById("hidden-high-score");
 var playAgainButton = document.getElementById("play-again");
 
+btn.className += "buttons";
+var btn2 = document.createElement("button");
+btn2.className += "buttons";
+let btn3 = document.createElement("button");
+btn3.className += "buttons";
+let btn4 = document.createElement("button");
+btn4.className += "buttons";
 
+var nameInput = document.getElementById("name");
+
+var score = 0;
+var timeInterval 
 
 
 
