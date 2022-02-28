@@ -13,7 +13,7 @@ var answerEl = document.getElementById("options");
 var answerButtons = document.querySelectorAll(".answers");
 var correctEl = document.getElementById("right-answers");
 var btn = document.createElement("button");
-var correctResultsEl = document.getElementById("hidden-right");
+var rightResultsEl = document.getElementById("hidden-right");
 var wrongResultsEl = document.getElementById("hidden-wrong");
 var highScoreButton = document.getElementById("high-score-button");
 var highScoreEl = document.getElementById("hidden-high-score");
@@ -124,6 +124,17 @@ function quizStart() {
 }
 
 nextButton.addEventListener("click", nextQuestion);
+
+function nextQuestion() {
+    index++;
+    index %= quizQuestions.length;
+    questionTextEl.innerText = quizQuestions[index];
+
+    rightAnswersIndex++;
+    rightAnswersIndex %= rightAnswers.length;
+
+    rightResultsEl.setAttribute("style", "display: none;");
+    wrongResultsEl.setAttribute("style", "display: none;");
 
 
 
