@@ -211,3 +211,18 @@ function nextQuestion() {
     }
     
 }
+
+function endQuiz() {
+    submitButton.setAttribute("style", "display: none;");
+    quizQuestionEl.setAttribute("style", "display: none;");
+    wrongResultsEl.setAttribute("style", "display: none;");
+    rightResultsEl.setAttribute("style", "display: none;");
+    nextButton.setAttribute("style", "display:none;");
+    quizScoreEl.setAttribute("style", "display: block;");
+    quizEl.setAttribute("style", "display:none;");
+
+    var scoreDisplay = score;
+    var scoreEl = document.getElementById("score");
+    scoreEl.innerText = "You're finished! Your house receives " + scoreDisplay + " points.";
+    clearInterval(timeInterval);
+}
