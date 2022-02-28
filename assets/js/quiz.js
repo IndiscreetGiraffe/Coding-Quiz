@@ -40,6 +40,35 @@ var buttonThreeAnswers = ['Tom Riddle', 'Timothy Raddler', 'Tommy Boy', 'Tom Red
 var buttonFourAnswers = ['Hermione Granger', 'Cho Change', 'Cedric Diggory', 'Draco Malfoy'];
 var correctAnswers = ['Gryffindor', 'Snitch', 'Tom Riddle', 'Cedric Diggory'];
 
+var index = 0;
+
+var buttonOneIndex = 0;
+var buttonTwoIndex = 0;
+var buttonThreeIndex = 0;
+var buttonFourIndex = 0;
+var correctAnswersIndex = 0;
+
+function quizStart() {
+    startButton.addEventListener("click", function () {
+        quizDivEl.setAttribute("style", "display:none");
+        quizQuestEl.setAttribute("style", "display: block");
+        controlsEl.setAttribute("style", "display: block;");
+        questionTextEl.innerText = quizQuestions[0];
+
+        btn.textContent = buttonOneAnswers[0];
+        answerEl.appendChild(btn);
+
+        btn2.textContent = buttonTwoAnswers[0];
+        answerEl.appendChild(btn2);
+
+        btn3.textContent = buttonThreeAnswers[0];
+        answerEl.appendChild(btn3);
+
+        btn4.textContent = buttonFourAnswers[0];
+        answerEl.appendChild(btn4);
+
+        
+
 
 
 
