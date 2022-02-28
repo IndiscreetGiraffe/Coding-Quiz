@@ -1,10 +1,54 @@
-.question{
-    font-weight: 600;
+* {
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.answers{
+
+.q-head {
+    display: flex;
+    flex-wrap: wrap;
+    margin: space-between;
+}
+
+#question-text {
+    font-size: medium;
+}
+
+.time-left {
+    color:cornflowerblue;
+    font-size: larger;
+}
+
+#quiz-name {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    margin: 100px 20px;
+}
+
+.quiz-name {
+    text-align: center;
+    width: 150px;
+    font-weight: bolder;
+}
+
+.quiz-rules {
+    font-weight: lighter;
+}
+
+.quiz-description {
+    font-weight: lighter;
+}
+
+#hidden-container {
+    display: none;
+}
+
+
+/*.answers{
     margin-bottom: 20ox;
 }
-.submit{
+/*.submit{
     font-family: sans-serif;
     font-size: 20px;
     background-color: blueviolet;
