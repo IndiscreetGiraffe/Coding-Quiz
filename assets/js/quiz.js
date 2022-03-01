@@ -236,3 +236,10 @@ submitButton.addEventListener("click", function () {
     endQuiz();
     
 })
+
+playAgainButton.addEventListener("click", function() {
+    quizEl.setAttribute("style", "display: block;");
+    quizScoreEl.setAttribute("style", "display: none;");
+    highScoreEl.setAttribute("style", "display: none;");
+    
+});
