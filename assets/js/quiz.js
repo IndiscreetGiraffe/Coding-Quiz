@@ -15,8 +15,8 @@ var rightEl = document.getElementById("right-answers");
 var btn = document.createElement("button");
 var rightResultsEl = document.getElementById("hidden-right");
 var wrongResultsEl = document.getElementById("hidden-wrong");
-var highScoreButton = document.getElementById("high-score-button");
-var highScoreEl = document.getElementById("hidden-high-score");
+var topScoreButton = document.getElementById("top-score-button");
+var topScoreEl = document.getElementById("hidden-top-score");
 var playAgainButton = document.getElementById("play-again");
 
 btn.className += "buttons";
@@ -27,7 +27,7 @@ btn3.className += "buttons";
 let btn4 = document.createElement("button");
 btn4.className += "buttons";
 
-var nameInput = document.getElementById("name");
+var initialsInput = document.getElementById("initials");
 
 var score = 0;
 var timeInterval 
@@ -240,6 +240,25 @@ submitButton.addEventListener("click", function () {
 playAgainButton.addEventListener("click", function() {
     quizEl.setAttribute("style", "display: block;");
     quizScoreEl.setAttribute("style", "display: none;");
-    highScoreEl.setAttribute("style", "display: none;");
+    topScoreEl.setAttribute("style", "display: none;");
     
+});
+
+
+var saveButton = document.getElementById("save-button");
+
+saveButton.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    initials = initialsInput.value.trim();
+
+    if (!initials) {
+        alert("Please type in your wizard initials");
+    }
+    var savedScore = {
+        name: initials,
+        score: score
+    };
+
+    localStorage.setItem("user", JSON.stringify(savedScore));
 });
