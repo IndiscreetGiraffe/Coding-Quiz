@@ -34,10 +34,10 @@ var timeInterval
 
 var quizQuestions = ['What house colors are red and gold?', 'In quidditch, what is the smallest and quickest ball called?', 'What was Voldemorts actual name?', 'Who belongs to the Hufflepuff house?'];
 
-var buttonOneAnswers = ['Slytherin', 'Gryffindor', 'Hufflepuff', 'Ravenclaw'];
-var buttonTwoAnswers = ['Quaffle', 'Bludger', 'Snitch', 'Quiffle'];
-var buttonThreeAnswers = ['Tom Riddle', 'Timothy Raddler', 'Tommy Boy', 'Tom Reddler'];
-var buttonFourAnswers = ['Hermione Granger', 'Cho Change', 'Cedric Diggory', 'Draco Malfoy'];
+var buttonOneAnswers = ['Slytherin', 'Quaffle', 'Tom Riddle', 'Hermione Granger'];
+var buttonTwoAnswers = ['Gryffindor', 'Bludger', 'Timothy Raddler', 'Cho Chang'];
+var buttonThreeAnswers = ['Hufflepuff', 'Snitch', 'Tommy Boy', 'Cedric Diggory'];
+var buttonFourAnswers = ['Ravenclaw', 'Quiffle', 'Tome Reddler', 'Draco Malfoy'];
 var rightAnswers = ['Gryffindor', 'Snitch', 'Tom Riddle', 'Cedric Diggory'];
 
 var index = 0;
@@ -281,3 +281,24 @@ topScoreButton.addEventListener("click", function () {
     listItemEl.innerText = savedScore.name + " " + savedScore.score;
     scoreList.appendChild(listItemEl);
 })
+
+var timeLeft = 60;
+
+function countdownTimer() {
+
+    timeInterval = setInterval(function () {
+
+        if (timeLeft >= 0) {
+            timerEl.textContent = timeLeft + 's';
+            timeLeft--;
+        }
+        else {
+            clearInterval(timeInterval);
+            window.alert("You've run out of time!");
+            endQuiz();
+
+        }
+    }, 1000);
+}
+
+quizStart();
