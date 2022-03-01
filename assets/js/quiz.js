@@ -262,3 +262,22 @@ saveButton.addEventListener("click", function (event) {
 
     localStorage.setItem("user", JSON.stringify(savedScore));
 });
+
+
+topScoreButton.addEventListener("click", function () {
+    quizQuestionEl.setAttribute("style", "display: none;");
+    quizEl.setAttribute("style", "display:none");
+    quizScoreEl.setAttribute("style", "display: none;");
+    wrongResultsEl.setAttribute("style", "display: none;");
+    rightResultsEl.setAttribute("style", "display: none;");
+    controlsEl.setAttribute("style", "display: none;");
+    topScoreEl.setAttribute("style", "display: block;");
+
+    savedScore = JSON.parse(localStorage.getItem("user"));
+    var scoreList = document.getElementById("score-list");
+    scoreList.setAttribute("style", "list-style: none;");
+    var listItemEl = document.createElement("li");
+    listItemEl.setAttribute("style", "align-items: center;");
+    listItemEl.innerText = savedScore.name + " " + savedScore.score;
+    scoreList.appendChild(listItemEl);
+})
