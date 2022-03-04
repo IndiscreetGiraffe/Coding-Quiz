@@ -38,7 +38,7 @@ var buttonOneAnswers = ['Slytherin', 'Quaffle', 'Tom Riddle', 'Hermione Granger'
 var buttonTwoAnswers = ['Gryffindor', 'Bludger', 'Timothy Raddler', 'Cho Chang'];
 var buttonThreeAnswers = ['Hufflepuff', 'Snitch', 'Tommy Boy', 'Cedric Diggory'];
 var buttonFourAnswers = ['Ravenclaw', 'Quiffle', 'Tome Reddler', 'Draco Malfoy'];
-var rightAnswers = ['HufflePuff', 'Snitch', 'Tom Riddle', 'Cedric Diggory'];
+var rightAnswers = ['Gryffindor', 'Snitch', 'Tom Riddle', 'Cedric Diggory'];
 
 var index = 0;
 
