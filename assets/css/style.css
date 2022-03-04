@@ -15,7 +15,6 @@
 }
 
 .time-left {
-    color: crimson;
     font-size: larger;
 }
 
@@ -44,6 +43,7 @@
 
 #hidden-container {
     display: none;
+    align-items: center;
 }
 
 .quiz-questions {
@@ -56,9 +56,7 @@
 }
 
 .score-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+   
     align-items: center; 
     text-align: center;
     
@@ -67,25 +65,18 @@
 #hidden-score-container {
     display: none;
     border-style: solid;
-    border-color: darkgoldenrod;
     border-width: 5px;
-    box-shadow: 5px 5px darkgoldenrod;
     height: 500px;
     width: 500px;
 }
 
 .buttons {
-    background-color: darkgoldenrod;
-    color: #f2edf3;
+
     width: 100px;
     margin: 20px;
     border-radius: 5px;
     padding: 12px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.buttons:hover {
-    background-color: darkgray;
 }
 
 #score {
@@ -97,7 +88,6 @@
 .results {
     font-weight: bold;
     font-size: 25px;
-    color: darkgoldenrod;
     text-align: center;
     margin-top: 200px;
     

@@ -50,7 +50,7 @@ var rightAnswersIndex = 0;
 
 function quizStart() {
     startButton.addEventListener("click", function () {
-        quizEl.setAttribute("style", "display:none");
+        quizEl.setAttribute("style", "display: center");
         quizQuestionEl.setAttribute("style", "display: block");
         controlsEl.setAttribute("style", "display: block;");
         questionTextEl.innerText = quizQuestions[0];
@@ -253,7 +253,7 @@ saveButton.addEventListener("click", function (event) {
     initials = initialsInput.value.trim();
 
     if (!initials) {
-        alert("Please type in your wizard initials");
+        alert("Please type in your wizard name");
     }
     var savedScore = {
         name: initials,
