@@ -27,12 +27,12 @@ btn3.className += "buttons";
 let btn4 = document.createElement("button");
 btn4.className += "buttons";
 
-var initialsInput = document.getElementById("initials");
+var initialsInput = document.getElementById("wizardname");
 
 var score = 0;
 var timeInterval 
 
-var quizQuestions = ['What house colors are red and gold?', 'In quidditch, what is the smallest and quickest ball called?', 'What was Voldemorts actual name?', 'Who belongs to the Hufflepuff house?'];
+var quizQuestions = ['What house colors are red and gold?', 'In Quidditch, what is the smallest and quickest ball called?', 'What was Voldemorts actual name?', 'Who belongs to the Hufflepuff house?'];
 
 var buttonOneAnswers = ['Slytherin', 'Quaffle', 'Tom Riddle', 'Hermione Granger'];
 var buttonTwoAnswers = ['Gryffindor', 'Bludger', 'Timothy Raddler', 'Cho Chang'];

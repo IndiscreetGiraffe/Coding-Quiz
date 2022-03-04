@@ -3,10 +3,11 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.q-head {
+.hidden-q-head {
     display: flex;
     flex-wrap: wrap;
-    margin: space-between;
+    margin: 40px;
+    justify-content: space-between;
 }
 
 #question-text {
@@ -21,6 +22,7 @@
 #quiz-name {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
     text-align: center;
     margin: 100px 20px;
@@ -28,7 +30,7 @@
 
 .quiz-name {
     text-align: center;
-    width: 150px;
+    width: 180px;
     font-weight: bolder;
 }
 
@@ -47,6 +49,7 @@
 .quiz-questions {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     align-items: center; 
     text-align: center;
     
@@ -55,6 +58,7 @@
 .score-container {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     align-items: center; 
     text-align: center;
     

@@ -4,11 +4,13 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <href src="./assets/css/style.css"></href>
-        <title>Quick Coding Quiz</title>
+        <title>House Cup Quiz</title>
     </head>
     <body>
-        <header class="q-head">
+        <header class="hidden-q-head">
             <span class="top-score"><button type="button" id="top-score-button"class="buttons">Look at your top scores here!</button></span>
             <span class="time-left" id="countdown">60s left</span>
         </header>
@@ -48,8 +50,8 @@
                 </div>
                 <div class="formBox">
                     <form>
-                        <label for="initials">Enter your wizard initials name here</label>
-                        <input type="text" id="initials" name="initials">
+                        <label for="wizardname">Enter your wizard name here</label>
+                        <input type="text" id="wizardname" name="wizardname">
                         <button type="submit" id="save-button">Save</button>
                     </form>
                 </div>
