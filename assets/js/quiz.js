@@ -8,6 +8,7 @@ var quizQuestionEl = document.getElementById("hidden-container");
 var questionTextEl = document.getElementById("question-text");
 var quizScoreEl = document.getElementById("hidden-score-container");
 var submitButton = document.getElementById("submit-button");
+var nextButton = document.getElementById("next-button");
 var controlsEl = document.getElementById("hidden-controls-container");
 var answerEl = document.getElementById("options");
 var answerButtons = document.querySelectorAll(".answers");
