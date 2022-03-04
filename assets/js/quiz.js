@@ -27,7 +27,7 @@ btn3.className += "buttons";
 let btn4 = document.createElement("button");
 btn4.className += "buttons";
 
-var initialsInput = document.getElementById("wizardname");
+var initialsInput = document.getElementById("initials");
 
 var score = 0;
 var timeInterval 
